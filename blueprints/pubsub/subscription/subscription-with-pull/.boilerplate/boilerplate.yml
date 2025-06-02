@@ -1,0 +1,7 @@
+variables:
+  - name: topic_name
+    description: The name of Topic
+    type: string
+  - name: subscription_name
+    description: The name of Subscription
+    type: string

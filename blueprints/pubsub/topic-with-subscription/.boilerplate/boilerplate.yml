@@ -1,0 +1,5 @@
+variables:
+  - name: topic_name
+    description: The name of Topic
+    type: string
+    default: meu-topico

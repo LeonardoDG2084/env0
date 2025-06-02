@@ -1,0 +1,11 @@
+variables:
+  - name: topic_name
+    description: The name of the Pub/Sub topic
+    type: string
+  - name: subscription_name
+    description: The name of Subscription
+    type: string
+  - name: table_name
+    description: The name of the BigQuery table
+    type: string
+  
