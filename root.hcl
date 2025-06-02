@@ -24,7 +24,7 @@ locals {
   # Extract the variables we need for easy access
   project_name = local.project_vars.locals.project_name
   project_id   = local.project_vars.locals.project_id
-  region   = local.region_vars.locals.region
+  region       = local.region_vars.locals.region
 }
 
 
@@ -40,7 +40,7 @@ inputs = merge(
 # Configure what repos to search when you run 'terragrunt catalog'
 catalog {
   urls = [
-   "https://github.com/LeonardoDG2084/env0.git"
+    "https://github.com/LeonardoDG2084/env0.git"
   ]
 }
 
