@@ -38,9 +38,8 @@ inputs = merge(
 
 
 # Configure what repos to search when you run 'terragrunt catalog'
-catalog {
-  urls = [
-    "https://github.com/LeonardoDG2084/env0.git"
-  ]
-}
-
+# catalog {
+#  urls = [
+#    "https://github.com/LeonardoDG2084/env0.git"
+#  ]
+# }
