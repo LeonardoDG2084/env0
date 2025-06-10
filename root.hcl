@@ -36,10 +36,22 @@ inputs = merge(
   local.environment_vars.locals,
 )
 
+remote_state {
+  backend = "gcs"
+  generate = {
+    path = "backend.tf"
+    if_exists = "overwrite"
+  }
+  config = {
+    bucket         = "my-terragrunt-tfstates-files"
+    project        = "lab-gke-349620"
+    location = "us"
+    prefix = "${path_relative_to_include()}"  # Optional: Use relative path for different state files
+  }
+}
 
-# Configure what repos to search when you run 'terragrunt catalog'
-# catalog {
-#  urls = [
-#    "https://github.com/LeonardoDG2084/env0.git"
-#  ]
-# }
+catalog {
+ urls = [
+    "https://github.com/LeonardoDG2084/env0.git"
+  ]
+}
