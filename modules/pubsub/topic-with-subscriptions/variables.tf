@@ -32,6 +32,13 @@ variable "labels" {
   type        = map(string)
   default     = {}
 }
+
+variable "message_retention_duration" {
+  type        = string
+  description = "The minimum duration in seconds to retain a message after it is published to the topic."
+  default     = null
+}
+
 variable "pull_subscriptions" {
   description = "A list of pull subscriptions to create for the topic."
   type = list(object({
