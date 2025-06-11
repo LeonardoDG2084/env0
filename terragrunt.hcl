@@ -43,3 +43,28 @@ inputs = merge(
 #    "https://github.com/LeonardoDG2084/env0.git"
 #  ]
 # }
+
+terraform {
+  source = "git::https://github.com/leonardodg2084/env0//modules/pubsub/topic-with-subscriptions"
+}
+
+inputs = {
+  topic_name = "topico-de-teste"
+  project_id = "lab-gke-349620"
+  region = "us-central1"
+  custom_labels = {}
+  labels = {}
+  pull_subscriptions = [
+    {
+      name = "topico-de-teste-sub"
+      ack_deadline_seconds = 10
+      expiration_policy = "2678400s"
+      retain_acked_messages = false
+      message_retention_duration = "604800s"
+      enable_message_ordering = false
+      enable_exactly_once_delivery = false
+    }
+  ]
+  push_subscriptions = []
+  schema = null
+}
