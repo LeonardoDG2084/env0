@@ -13,4 +13,5 @@ module "google-pubsub" {
   subscription_labels = var.labels
   bigquery_subscriptions = var.bigquery_subscriptions
   grant_token_creator = false
+  message_retention_duration = "97440s"
 }
