@@ -14,5 +14,6 @@ module "google-pubsub" {
   pull_subscriptions = var.pull_subscriptions
   push_subscriptions = var.push_subscriptions
   grant_token_creator = false
+  topic_message_retention_duration = var.message_retention_duration
   schema = var.schema
 }
